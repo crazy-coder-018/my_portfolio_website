@@ -17,7 +17,7 @@ class HeaderDesktop extends StatelessWidget {
       child: Row(
         children: [
           // Logo
-          SiteLogo(() {}),
+          SiteLogo(onTapChange: () {}),
 
           Spacer(),
 

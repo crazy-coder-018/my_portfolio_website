@@ -6,7 +6,11 @@ class HeaderMobile extends StatelessWidget {
   final VoidCallback? onLogoTap;
   final VoidCallback? onMenuTap;
 
-  const HeaderMobile(this.onLogoTap, this.onMenuTap, {super.key});
+  const HeaderMobile({
+    super.key,
+    required this.onLogoTap,
+    required this.onMenuTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +21,7 @@ class HeaderMobile extends StatelessWidget {
       child: Row(
         children: [
           // Logo
-          SiteLogo(onLogoTap),
+          SiteLogo(onTapChange: () {}),
 
           const Spacer(),
 

@@ -4,7 +4,7 @@ import 'package:my_portfolio_website/constants/colors.dart';
 class SiteLogo extends StatelessWidget {
   final VoidCallback? onTapChange;
 
-  const SiteLogo(this.onTapChange, {super.key});
+  const SiteLogo({super.key, required this.onTapChange});
 
   @override
   Widget build(BuildContext context) {
