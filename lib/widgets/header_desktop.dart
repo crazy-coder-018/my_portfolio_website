@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio_website/constants/colors.dart';
 import 'package:my_portfolio_website/constants/nav_items.dart';
+import 'package:my_portfolio_website/widgets/site_logo.dart';
 
 class HeaderDesktop extends StatelessWidget {
   const HeaderDesktop({super.key});
@@ -20,14 +21,7 @@ class HeaderDesktop extends StatelessWidget {
       child: Row(
         children: [
           // Logo
-          Text(
-            'C.Coder',
-            style: TextStyle(
-              color: CustomColors.yellowSecondary,
-              fontSize: 22,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
+          SiteLogo(() {}),
 
           Spacer(),
 
