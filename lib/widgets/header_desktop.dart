@@ -30,8 +30,9 @@ class HeaderDesktop extends StatelessWidget {
                   navTitles[i],
                   style: TextStyle(
                     color: CustomColors.whitePrimary,
-                    fontSize: 16,
+                    fontSize: 14,
                     fontWeight: FontWeight.w500,
+                    letterSpacing: 1,
                   ),
                 ),
               ),

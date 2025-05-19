@@ -52,9 +52,9 @@ class DrowerMobile extends StatelessWidget {
                   title: Text(navTitles[i]),
                   titleTextStyle: TextStyle(
                     color: CustomColors.whiteSecondary,
-                    fontSize: 16,
+                    fontSize: 14,
                     fontWeight: FontWeight.w500,
-                    letterSpacing: 1.2,
+                    letterSpacing: 1,
                   ),
                 ),
               ),
