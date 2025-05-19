@@ -21,7 +21,10 @@ class HeaderMobile extends StatelessWidget {
       child: Row(
         children: [
           // Logo
-          SiteLogo(onTapChange: () {}),
+          Padding(
+            padding: const EdgeInsets.only(left: 14.0),
+            child: SiteLogo(onTapChange: () {}),
+          ),
 
           const Spacer(),
 
