@@ -15,6 +15,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  final _desktopWidth = 600.0;
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +24,13 @@ class _HomePageState extends State<HomePage> {
         return Scaffold(
           key: scaffoldKey,
           backgroundColor: CustomColors.scaffoldBG,
-          endDrawer: DrowerMobile(),
+          endDrawer:
+              constraints.maxWidth >= _desktopWidth ? null : DrowerMobile(),
           body: ListView(
             scrollDirection: Axis.vertical,
             children: [
               // Main
-              if (constraints.maxWidth >= 600.0)
+              if (constraints.maxWidth >= _desktopWidth)
                 HeaderDesktop()
               else
                 HeaderMobile(
