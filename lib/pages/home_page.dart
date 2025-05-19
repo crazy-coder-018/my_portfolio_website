@@ -44,23 +44,30 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
 
+            Divider(color: CustomColors.bgLight2),
             // Menu Bar
             for (int i = 0; i < navIcons.length; i++)
               Padding(
                 padding: const EdgeInsets.only(top: 20.0),
-                child: ListTile(
-                  onTap: () {},
-                  contentPadding: const EdgeInsets.symmetric(
-                    horizontal: 30.0,
-                    vertical: 0.0,
+                child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 4.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
                   ),
-                  leading: Icon(navIcons[i]),
-                  title: Text(navTitles[i]),
-                  titleTextStyle: TextStyle(
-                    color: CustomColors.whitePrimary,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 1.2,
+                  child: ListTile(
+                    onTap: () {},
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 30.0,
+                      vertical: 0.0,
+                    ),
+                    leading: Icon(navIcons[i]),
+                    title: Text(navTitles[i]),
+                    titleTextStyle: TextStyle(
+                      color: CustomColors.whitePrimary,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1.2,
+                    ),
                   ),
                 ),
               ),
