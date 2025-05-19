@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:my_portfolio_website/constants/colors.dart';
-import 'package:my_portfolio_website/constants/nav_items.dart';
 import 'package:my_portfolio_website/widgets/drower_mobile.dart';
 import 'package:my_portfolio_website/widgets/header_mobile.dart';
 
