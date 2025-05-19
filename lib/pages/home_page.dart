@@ -20,10 +20,31 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: CustomColors.scaffoldBG,
+      // Drawer
       endDrawer: Drawer(
         backgroundColor: CustomColors.scaffoldBG,
         child: ListView(
           children: [
+            // For Closing the Drawer
+            Align(
+              alignment: Alignment.centerRight,
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  top: 10.0,
+                  bottom: 10.0,
+                  left: 20.0,
+                  right: 20.0,
+                ),
+                child: IconButton(
+                  onPressed: () {
+                    scaffoldKey.currentState?.closeEndDrawer();
+                  },
+                  icon: Icon(Icons.close),
+                ),
+              ),
+            ),
+
+            // Menu Bar
             for (int i = 0; i < navIcons.length; i++)
               Padding(
                 padding: const EdgeInsets.only(top: 20.0),
