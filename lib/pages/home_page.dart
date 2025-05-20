@@ -45,7 +45,8 @@ class _HomePageState extends State<HomePage> {
               SizedBox(height: 40),
 
               // Main Desktop
-              if (constraints.maxWidth >= _desktopWidth)
+              if (constraints.maxWidth >= 400 &&
+                  constraints.maxWidth >= _desktopWidth)
                 MainDesktop()
               else
                 MainDesktopMobile(),
