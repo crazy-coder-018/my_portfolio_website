@@ -5,6 +5,7 @@ import 'package:my_portfolio_website/constants/colors.dart';
 import 'package:my_portfolio_website/widgets/drower_mobile.dart';
 import 'package:my_portfolio_website/widgets/header_desktop.dart';
 import 'package:my_portfolio_website/widgets/header_mobile.dart';
+import 'package:my_portfolio_website/widgets/main_desktop.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -40,14 +41,15 @@ class _HomePageState extends State<HomePage> {
                   },
                 ),
 
+              // Main Desktop
+              MainDesktop(),
+
               // Skills
               Container(
                 width: double.maxFinite,
                 height: 500,
-                color: CustomColors.scaffoldBG,
-                child: Center(
-                  child: Image.asset('lib/image/Development-cuate.png'),
-                ),
+                color: CustomColors.bgLight1,
+                child: Center(child: Text('Skills')),
               ),
 
               // Projects
