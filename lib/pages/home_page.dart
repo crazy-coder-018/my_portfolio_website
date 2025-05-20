@@ -6,6 +6,7 @@ import 'package:my_portfolio_website/widgets/drower_mobile.dart';
 import 'package:my_portfolio_website/widgets/header_desktop.dart';
 import 'package:my_portfolio_website/widgets/header_mobile.dart';
 import 'package:my_portfolio_website/widgets/main_desktop.dart';
+import 'package:my_portfolio_website/widgets/main_desktop_mobile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -41,8 +42,13 @@ class _HomePageState extends State<HomePage> {
                   },
                 ),
 
+              SizedBox(height: 40),
+
               // Main Desktop
-              MainDesktop(),
+              if (constraints.maxWidth >= _desktopWidth)
+                MainDesktop()
+              else
+                MainDesktopMobile(),
 
               // Skills
               Container(
