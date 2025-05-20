@@ -69,38 +69,25 @@ class MainDesktop extends StatelessWidget {
               SizedBox(height: 24),
 
               // Elevated Button
-              ShaderMask(
-                shaderCallback: (bounds) {
-                  return LinearGradient(
-                    colors: [
-                      const Color(0xFFFF950B),
-                      const Color(0xFFFFB83E),
-                      const Color(0xFFFFCE78),
-                    ],
-                    begin: FractionalOffset(1.0, 1.0),
-                    end: FractionalOffset(1.0, 0.0),
-                  ).createShader(bounds);
-                },
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: CustomColors.yellowPrimary,
-                    animationDuration: Duration(seconds: 1),
-                    elevation: 14,
-                    shadowColor: Colors.black,
-                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                    side: BorderSide(color: CustomColors.yellowSecondary),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      'Get in touch',
-                      style: TextStyle(
-                        color: CustomColors.scaffoldBG,
-                        fontWeight: FontWeight.w800,
-                        fontSize: 16,
-                        letterSpacing: 0.8,
-                      ),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: CustomColors.yellowPrimary,
+                  animationDuration: Duration(seconds: 1),
+                  elevation: 14,
+                  shadowColor: Colors.black,
+                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  side: BorderSide(color: CustomColors.yellowSecondary),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Get in touch',
+                    style: TextStyle(
+                      color: CustomColors.scaffoldBG,
+                      fontWeight: FontWeight.w800,
+                      fontSize: 16,
+                      letterSpacing: 0.8,
                     ),
                   ),
                 ),
