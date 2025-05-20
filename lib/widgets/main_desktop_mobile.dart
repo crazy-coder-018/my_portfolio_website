@@ -15,7 +15,17 @@ class MainDesktopMobile extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Column
+          // Image
+          Image.asset(
+            'lib/image/Development-cuate.png',
+            height: 200,
+            width: 450,
+            fit: BoxFit.cover,
+          ),
+
+          SizedBox(height: 32),
+
+          // Text Column
           Padding(
             padding: const EdgeInsets.only(left: 40),
             child: Column(
@@ -95,15 +105,6 @@ class MainDesktopMobile extends StatelessWidget {
                 ),
               ],
             ),
-          ),
-
-          SizedBox(height: 32),
-
-          Image.asset(
-            'lib/image/Development-cuate.png',
-            height: 200,
-            width: 450,
-            fit: BoxFit.cover,
           ),
         ],
       ),
