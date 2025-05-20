@@ -45,7 +45,9 @@ class _HomePageState extends State<HomePage> {
                 width: double.maxFinite,
                 height: 500,
                 color: CustomColors.scaffoldBG,
-                child: Center(child: Text('Skills')),
+                child: Center(
+                  child: Image.asset('lib/image/Development-cuate.png'),
+                ),
               ),
 
               // Projects
