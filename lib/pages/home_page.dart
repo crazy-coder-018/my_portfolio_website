@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:my_portfolio_website/constants/colors.dart';
+import 'package:my_portfolio_website/constants/skill_items.dart';
 import 'package:my_portfolio_website/widgets/drower_mobile.dart';
 import 'package:my_portfolio_website/widgets/header_desktop.dart';
 import 'package:my_portfolio_website/widgets/header_mobile.dart';
@@ -53,10 +54,82 @@ class _HomePageState extends State<HomePage> {
 
               // Skills
               Container(
-                width: double.maxFinite,
-                height: 500,
+                padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
+                width: _desktopWidth,
                 color: CustomColors.bgLight1,
-                child: Center(child: Text('Skills')),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    // Title
+                    Text(
+                      'What I can Do',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: CustomColors.whitePrimary,
+                      ),
+                    ),
+
+                    SizedBox(height: 32),
+
+                    // Platforms and Skills
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // Platforms
+                        ConstrainedBox(
+                          constraints: const BoxConstraints(maxWidth: 450),
+                          child: Wrap(
+                            spacing: 5.0,
+                            runSpacing: 5.0,
+                            children: [
+                              for (int i = 0; i < platformItems.length; i++)
+                                Container(
+                                  width: 200,
+                                  decoration: BoxDecoration(
+                                    color: CustomColors.bgLight2,
+                                    borderRadius: BorderRadius.circular(6),
+                                  ),
+                                  child: ListTile(
+                                    contentPadding: EdgeInsets.symmetric(
+                                      vertical: 12,
+                                      horizontal: 12,
+                                    ),
+                                    leading: Image.asset(
+                                      platformItems[i]['img'],
+                                      width: 26,
+                                    ),
+                                    title: Text(platformItems[i]['title']),
+                                  ),
+                                ),
+                            ],
+                          ),
+                        ),
+
+                        SizedBox(width: 50),
+
+                        // Skills
+                        Wrap(
+                          spacing: 5.0,
+                          runSpacing: 5.0,
+                          children: [
+                            for (int i = 0; i < skillItems.length; i++)
+                              Chip(
+                                padding: EdgeInsets.symmetric(
+                                  vertical: 12.0,
+                                  horizontal: 16.0,
+                                ),
+                                label: Text(skillItems[i]['title']),
+                                avatar: Image.asset(skillItems[i]['img']),
+                                backgroundColor: CustomColors.bgLight2,
+                              ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
 
               // Projects
