@@ -63,7 +63,6 @@ class _HomePageState extends State<HomePage> {
               Container(
                 width: double.maxFinite,
                 height: 500,
-                color: CustomColors.bgLight1,
                 child: Center(child: Text('Projects')),
               ),
 
