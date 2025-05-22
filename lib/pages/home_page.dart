@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
           body: ListView(
             scrollDirection: Axis.vertical,
             children: [
-              // Main
+              // Main Header
               if (constraints.maxWidth >= _desktopWidth)
                 HeaderDesktop()
               else
@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
               else
                 MainDesktopMobile(),
 
-              // Skills
+              // Skills Section
               Container(
                 padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
                 width: _desktopWidth,
@@ -132,14 +132,14 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
 
-              // Projects
+              // Projects Section
               Container(
                 width: double.maxFinite,
                 height: 500,
                 child: Center(child: Text('Projects')),
               ),
 
-              // Contact
+              // Contact Section
               Container(
                 width: double.maxFinite,
                 height: 500,
@@ -147,7 +147,7 @@ class _HomePageState extends State<HomePage> {
                 child: Center(child: Text('Contact')),
               ),
 
-              // Footer
+              // Footer Section
               Container(
                 width: double.maxFinite,
                 height: 500,
