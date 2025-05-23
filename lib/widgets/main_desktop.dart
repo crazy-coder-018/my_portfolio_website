@@ -95,7 +95,9 @@ class MainDesktop extends StatelessWidget {
             ],
           ),
 
-          Image.asset('lib/image/Development-cuate.png', height: 500),
+          Flexible(
+            child: Image.asset('lib/image/Development-cuate.png', height: 500),
+          ),
         ],
       ),
     );
