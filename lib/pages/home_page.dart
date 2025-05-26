@@ -1,5 +1,3 @@
-// ignore_for_file: sized_box_for_whitespace
-
 import 'package:flutter/material.dart';
 import 'package:my_portfolio_website/constants/colors.dart';
 import 'package:my_portfolio_website/widgets/drower_mobile.dart';
@@ -84,7 +82,7 @@ class _HomePageState extends State<HomePage> {
               ),
 
               // Projects Section
-              Container(
+              const SizedBox(
                 width: double.maxFinite,
                 height: 500,
                 child: Center(child: Text('Projects')),
@@ -99,7 +97,7 @@ class _HomePageState extends State<HomePage> {
               ),
 
               // Footer Section
-              Container(
+              const SizedBox(
                 width: double.maxFinite,
                 height: 500,
                 child: Center(child: Text('Footer')),
