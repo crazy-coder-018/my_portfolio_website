@@ -80,28 +80,6 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-
-              // Projects Section
-              const SizedBox(
-                width: double.maxFinite,
-                height: 500,
-                child: Center(child: Text('Projects')),
-              ),
-
-              // Contact Section
-              Container(
-                width: double.maxFinite,
-                height: 500,
-                color: CustomColors.bgLight2,
-                child: Center(child: Text('Contact')),
-              ),
-
-              // Footer Section
-              const SizedBox(
-                width: double.maxFinite,
-                height: 500,
-                child: Center(child: Text('Footer')),
-              ),
             ],
           ),
         );
